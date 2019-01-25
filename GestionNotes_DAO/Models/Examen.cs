@@ -27,7 +27,6 @@ namespace GestionNotes_DAO.Models
         {
             this.Identifiant = -1;
             this.Libelle = string.Empty;
-            this.Date = new DateTime(2000, 01, 01);
             this.Evaluations = new HashSet<Evaluation>();
         }
 
