@@ -48,15 +48,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201901251203321_InitialCreate.cs" />
+    <Compile Include="Migrations\201901251203321_InitialCreate.Designer.cs">
+      <DependentUpon>201901251203321_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Eleve.cs" />
     <Compile Include="Models\Evaluation.cs" />
     <Compile Include="Models\Examen.cs" />
-    <Compile Include="Models\gestionNotesContext.cs" />
+    <Compile Include="Models\GestionNotesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901251203321_InitialCreate.resx">
+      <DependentUpon>201901251203321_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

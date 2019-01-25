@@ -13,7 +13,9 @@ namespace GestionNotes_DAO.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Identifiant { get; set; }
+        [Display (Name="Examen")]
         public long IdExamen { get; set; }
+        [Display(Name = "Eleve")]
         public long IdEleve { get; set; }
         [Required]
         public float Note { get; set; }

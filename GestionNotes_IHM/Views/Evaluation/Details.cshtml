@@ -1,0 +1,42 @@
+﻿@model GestionNotes_DAO.Models.Evaluation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evaluation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Eleve.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eleve.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Examen.Libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Examen.Libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Identifiant }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
