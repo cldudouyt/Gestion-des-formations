@@ -14,7 +14,7 @@ namespace GestionNotes_IHM.Controllers.API
     {
         
         [HttpGet]
-        public float GetMoyenne(long id)
+        public float Get(long id)
         {
             float moyenne;
             GestionNotesContext ctx;

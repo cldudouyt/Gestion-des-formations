@@ -8,8 +8,6 @@
 
 <div>
     <h4>Eleve</h4>
-    <br />
-    Moyenne : <label id="LblMoyenne" />
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -28,6 +26,14 @@
             @Html.DisplayFor(model => model.Prenom)
         </dd>
 
+        <dt>
+            Moyenne
+        </dt>
+
+        <dd id="LblMoyenne">
+            
+        </dd>
+
     </dl>
 </div>
 <p>
@@ -38,9 +44,10 @@
 @section Script
 {
     <script type="text/javascript">
-        $(document).ready(fucntion(){
-            $.getJSON("/Data",
-                fuction (data))
-        })
+        $(document).ready(function ()
+        {
+            $.getJSON("/api/Data/ @Model.Identifiant",
+                function (data) { $('#LblMoyenne').text(data); });
+        });
     </script>
 }
