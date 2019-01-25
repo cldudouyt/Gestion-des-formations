@@ -8,6 +8,8 @@
 
 <div>
     <h4>Eleve</h4>
+    <br />
+    Moyenne : <label id="LblMoyenne" />
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -32,3 +34,13 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Identifiant }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+@section Script
+{
+    <script type="text/javascript">
+        $(document).ready(fucntion(){
+            $.getJSON("/Data",
+                fuction (data))
+        })
+    </script>
+}
